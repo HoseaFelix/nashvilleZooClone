@@ -1,0 +1,22 @@
+import{h as n,render as f}from"https://cdn.skypack.dev/pin/preact@v10.5.15-ayWzdHo1JK6lzASFp2Y9/mode=imports,min/optimized/preact.js";import p from"https://cdn.skypack.dev/pin/htm@v3.1.0-Lnrl6ooU0xR8YCDnwwW6/mode=imports,min/optimized/htm.js";import{h as s}from"https://cdn.skypack.dev/pin/preact@v10.5.15-ayWzdHo1JK6lzASFp2Y9/mode=imports,min/optimized/preact.js";import{useState as m}from"https://cdn.skypack.dev/pin/preact@v10.5.15-ayWzdHo1JK6lzASFp2Y9/mode=imports,min/optimized/preact/hooks.js";import a from"https://cdn.skypack.dev/pin/htm@v3.1.0-Lnrl6ooU0xR8YCDnwwW6/mode=imports,min/optimized/htm.js";var c=a.bind(s);function i(){let[t,o]=m();return c`<form
+    class="swform SWSearchForm"
+    name="SWSearchForm"
+    onSubmit=${r=>(r.preventDefault(),location=`/searchresults.aspx?s=${encodeURIComponent(t)}`,!1)}
+  >
+    <div class="swformfield swformfield--text ">
+      <div class="swformfieldwrapper">
+        <input
+          type="search"
+          class="swformfield__control"
+          name="sw-search-bar-search-term"
+          onkeyup=${r=>o(r.target.value)}
+        />
+      </div>
+    </div>
+    <div class="swformactions">
+      <div class="swformsubmit">
+        <button class="swformsubmit__btn" type="submit">Search</button>
+      </div>
+    </div>
+  </form> `}var e=i;var l=p.bind(n),d=()=>{f(l`<${e} />`,document.querySelector(".SWSiteSearchBar"))};d();
+//# sourceMappingURL=index.js.map

@@ -1,0 +1,45 @@
+import parse from "https://esm.sh/date-fns@2.30.0/parse";
+import format from "https://esm.sh/date-fns@2.30.0/format";
+
+window.swSiteHours = (options, days) => {
+  const container = document.querySelector(options.querySelector);
+  if (!container) {
+    console.error("swSiteHours: No container found.");
+  }
+
+  const timeZone = options.TimeZone || "America/Chicago"; // default
+
+  const formatOptions = {
+    timeZone,
+    weekday: "short",
+  };
+  const formatter = new Intl.DateTimeFormat([], formatOptions);
+
+  let dayOfWeek = formatter.format(new Date());
+  // Legacy data
+  if (dayOfWeek == "Thu") {
+    dayOfWeek = "Thur";
+  } else if (dayOfWeek == "Tue") {
+    dayOfWeek = "Tues";
+  }
+
+  const today = days.find((day) => day.FieldValues.DayOfTheWeek == dayOfWeek);
+
+  if (!today || today.FieldValues.Closed) {
+    container.innerHTML = options.ClosedMessage;
+    return;
+  }
+
+  const open = parse(today.FieldValues.OpenTime, "HH:mm", new Date());
+  const end = parse(today.FieldValues.CloseTime, "HH:mm", new Date());
+
+  const openFormatted = format(open, "p");
+  const endFormatted = format(end, "p");
+  let message = "";
+  if (today.FieldValues.Message) {
+    message = `<p>${today.FieldValues.Message}</p>`;
+  }
+
+  container.innerHTML = `<div class="today-hours">${openFormatted} - ${endFormatted}</div>${message}`;
+};
+

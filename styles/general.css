@@ -1,0 +1,14 @@
+body{
+    font-family: proxima-nova, sans-serif;
+    padding-top: 50px;
+    padding-left: 0;
+    margin: 0px;
+    height: 3000px;
+    overflow-x: hidden;
+    
+    background-size: cover;
+    background-image: url(pexels-theother-kev-5969520.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-sizing: content-box;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <style>
+    #submit{
+         padding: 10px 30px;
+         background-color: blue;
+         border: none;
+         color: white;
+         font-size: 20px;
+         border-radius: 30px;
+         margin: auto;
+         position: absolute;
+         
+    }
+    #rotate{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        background-color: blue;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 140px;
+        display: none;
+        
+        
+    }
+    #rotate::before{
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border: 2px solid white;
+        border-top: none;
+        border-left: none;
+        animation: rotate 1s 7 linear ;
+        
+        border-radius: 50%;
+
+    }
+   
+    
+    @keyframes rotate{
+        0%{
+            transform: rotate(360deg);
+
+        }
+        
+    }
+    #mark{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        background-color: blue;
+        position: absolute;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        left: 140px;
+        
+        animation: appear 6s  linear;
+    }
+    @keyframes appear{
+        0%{
+            opacity: 0;
+        }
+        99%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    #mark::before{
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 20px;
+        border: 3px solid white;
+        border-top: none;
+        border-left: none;
+        
+       
+       transform: rotate(40deg);
+       bottom: 12px;
+    }
+    div{
+        display: flex;
+        
+        align-items: center;
+        padding: 100px;
+
+    }
+    #rotate
+    </style>
+</head>
+<body>
+    <div>
+        <button id="submit">submit</button>
+        <button id="rotate"></button>
+        <button id="mark"></button>
+        
+    </div>
+   
+    
+    <script>
+        const submit= document.getElementById('submit')  ;
+        const rotate=document.getElementById('rotate');
+        const mark=document.getElementById('mark');
+
+        submit.addEventListener('click',()=>{
+        submit.style.display= 'none';
+        rotate.style.display= 'flex';
+        mark.style.display= 'flex'
+        }, 10000);
+        
+    </script>
+
+</body>
+</html>

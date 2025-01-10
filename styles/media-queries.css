@@ -1,0 +1,155 @@
+@media(max-width: 1300px){
+    .first-nav{
+        width: 450px;
+        
+        
+    }
+    .first-nav div{
+        font-size: 14px;
+        letter-spacing: 0;
+    }
+}
+@media(max-width:1170px){
+    .first-nav{
+        display: none;
+    }
+}
+@media (max-width: 1184px){
+    .fifth-div-container{
+        width: 920px;
+    }
+    .middle-body-content{
+        width: 700px;
+        height: 95%;
+    }
+    .forth-div-inner-container{
+        width: 900px;
+    }
+    
+    
+}
+@media(max-width:946px){
+    .check-it-out{
+        display: none;
+    }
+    .second-body-body{
+        
+        width: 80%;
+    }
+}
+@media(max-width:1470px){
+    .middle-body-image-container{
+        display: none;
+    }
+}
+@media (max-width:892px){
+    .third-imgf{
+        display: none;
+    }
+    .fifth-div-imgs{
+        grid-template-columns: 1fr 1fr;
+        width: 80%;
+        margin: auto;
+    }
+    .news{
+        margin-left:90px;
+    }
+    .news-caption p:first-child{
+        font-size: 16px;
+    }
+    .news-caption p:last-child{
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .view-blog{
+        margin-left: 90px;
+    }
+    .imgf-captions{
+        font-size: 16px;
+    }
+    .last{
+        height: 800px;
+    }
+    .footer-giraffe{
+        height: 500px;
+        position: absolute;
+        bottom: 0;
+        top: 38%;
+    }
+    .last-stand{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        height: 80%;
+        margin-left: 00px;
+        
+    }
+    .partners{
+        flex-wrap: wrap;
+    }
+    .last-stand div:first-child{
+        width: 100%;
+        margin-bottom: 50px;
+        font-size:30px;
+        margin-left: 120px;
+    }
+    .last-stand div+div{
+        width: 100%;
+        height: 100%;
+        margin-left: 200px;
+    }
+    .nash p:nth-child(2){
+        font-size: 15px;
+    }
+    li{
+        font-size: 15px;
+    }
+    .mail{
+        left: 0;
+        right: 0;
+        padding: 0px;
+        margin: 0;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        
+    }
+    .mails{
+        top: -30%;
+        left: 45%;
+        
+    }
+    .ticket{
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        object-position: center;
+    }
+    .donate{
+        width: 30px;
+        
+    }
+    .forth-div-inner-container{
+        width: 800px;
+    }
+}
+
+@media (max-width:360px){
+    .second-nav2-content{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        position: relative;
+        top: -20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        align-items: center;
+        font-family: proxima-nova, sans-serif;
+        font-weight: bold;
+        color: white;
+        font-size: 18px; 
+        display: none;  
+    }
+}
